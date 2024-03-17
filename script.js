@@ -6,5 +6,8 @@ for (let i = 0; i < 16; i++) { // loop 16 times for rows
     const cell = document.createElement("div");
     cell.classList.add("cell");
     grid.appendChild(cell);
+    cell.addEventListener("mouseover", () => {
+      cell.style.backgroundColor = "gray";  
+    });
   }
 };
