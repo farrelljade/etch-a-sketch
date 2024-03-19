@@ -2,13 +2,37 @@
   padding: 0;
   margin: 0;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
 .container {
   display: flex;
-  flex-wrap: wrap;
 }
-.btnContainer {
+.sketchBtnContainer {
   display: flex;
   justify-content: center;
+  margin: 20px;
+}
+#sketchBtn,
+#randomColor,
+#eraser,
+#clearGrid {
+  background: hsl(217, 100%, 61%);
+  color: hsl(90, 17%, 98%);
+  font-weight: 700;
+  padding: 10px;
   margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+#btn:hover {
+  background: hsl(217, 100%, 54%);
+}
+
+.menuBtnContainer {
+  display: flex;
+  margin: 20px;
 }
