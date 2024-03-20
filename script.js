@@ -6,6 +6,16 @@ grid.style.margin = "20px";
 grid.style.border = "15px solid hsl(0, 0%, 67%)"
 grid.style.borderRadius = "10px";
 
+// Target/Name the etch-a-sketch buttons.
+const startSketch = document.querySelector("#startSketch");
+startSketch.textContent = "Start sketch";
+const randomColor = document.querySelector("#randomColor");
+randomColor.textContent = "Random color";
+const eraser = document.querySelector("#eraser");
+eraser.textContent = "Eraser";
+const clearGrid = document.querySelector("#clearGrid");
+clearGrid.textContent = "Clear grid";
+
 // Target the sketch button and style it.
 const sketchBtn = document.querySelector("#sketchBtn");
 sketchBtn.textContent = "Create grid";
@@ -28,15 +38,7 @@ sketchBtn.addEventListener("click", () => {
   }
 });
 
-const startSketch = document.querySelector("#startSketch");
-startSketch.textContent = "Start sketch";
-const randomColor = document.querySelector("#randomColor");
-randomColor.textContent = "Random color";
-const eraser = document.querySelector("#eraser");
-eraser.textContent = "Eraser";
-const clearGrid = document.querySelector("#clearGrid");
-clearGrid.textContent = "Clear grid";
-
+// Target/Execute the 'Start sketch' button.
 document.querySelector("#startSketch").addEventListener("click", () => {
   setTimeout(() => { // Use setTimeout to run after the grid has been created
     const cells = document.querySelectorAll(".cell");
@@ -48,6 +50,7 @@ document.querySelector("#startSketch").addEventListener("click", () => {
   }, 0);
 });
 
+// Target/Execute the 'Random button' button. 
 document.querySelector("#randomColor").addEventListener("click", () => {
   setTimeout(() => {
     const cells = document.querySelectorAll(".cell");
@@ -59,6 +62,7 @@ document.querySelector("#randomColor").addEventListener("click", () => {
   }, 0);
 });
 
+// Target/Execute the 'Eraser' button.
 document.querySelector("#eraser").addEventListener("click", () => {
   setTimeout(() => {
     const cells = document.querySelectorAll(".cell");
@@ -70,7 +74,7 @@ document.querySelector("#eraser").addEventListener("click", () => {
   }, 0);
 });
 
-
+// Target/Execute the 'Clear grid' button.
 document.querySelector("#clearGrid").addEventListener("click", () => {
   const cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
