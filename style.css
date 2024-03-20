@@ -10,25 +10,31 @@ body {
   
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
-.sketchBtnContainer {
+#sketchBtn {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 #sketchBtn,
+#startSketch,
 #randomColor,
 #eraser,
 #clearGrid {
   background: hsl(217, 100%, 61%);
-  color: hsl(90, 17%, 98%);
+  color: hsl(0, 0%, 100%);
   font-weight: 700;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
   border: none;
 }
-#btn:hover {
+#sketchBtn:hover,
+#startSketch:hover,
+#randomColor:hover,
+#eraser:hover,
+#clearGrid:hover {
   background: hsl(217, 100%, 54%);
 }
 
