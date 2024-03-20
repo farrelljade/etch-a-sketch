@@ -48,6 +48,17 @@ document.querySelector("#startSketch").addEventListener("click", () => {
   }, 0);
 });
 
+document.querySelector("#randomColor").addEventListener("click", () => {
+  setTimeout(() => {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach(cell => {
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215);
+      });
+    });
+  }, 0);
+});
+
 document.querySelector("#eraser").addEventListener("click", () => {
   setTimeout(() => {
     const cells = document.querySelectorAll(".cell");
@@ -57,4 +68,12 @@ document.querySelector("#eraser").addEventListener("click", () => {
       });
     });
   }, 0);
+});
+
+
+document.querySelector("#clearGrid").addEventListener("click", () => {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => {
+    cell.style.backgroundColor = "hsl(0, 0%, 100%)";
+  });
 });
